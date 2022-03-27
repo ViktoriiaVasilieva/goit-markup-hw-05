@@ -569,7 +569,6 @@ body {
 }
 .close-modal-icon {
    background-color: var(--white-color);
-   height: 100;
 }
 .close-modal-button {
    position: absolute;

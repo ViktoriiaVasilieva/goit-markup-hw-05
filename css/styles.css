@@ -77,6 +77,9 @@ body {
    line-height: calc(16 / 14);
    letter-spacing: 0.02em;
    color: var(--primary-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-link {
    color: var(--secondary-color);
@@ -132,6 +135,10 @@ body {
    padding: 10px 32px;
    margin-top: 30px;
    min-width: 200px;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-title {
    font-size: 44px;
@@ -252,6 +259,8 @@ body {
    font-style: normal;
 }
 .contacts-link-footer {
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    color: rgba(255, 255, 255, 0.6);
 }
 .contacts-item-footer:not(:last-child) {
@@ -278,10 +287,17 @@ body {
    background: var(--secondary-background-color);
    height: 38px;
    padding: 6px 22px;
-   margin: 0 8px 50px 0;
+   margin-top: 0;
+   margin-bottom: 50px;
+   margin-left: 0;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-filter-item + .button-filter-item + .button-filter-item {
-   margin-right: 30px;
+
+.button-filter-list li:not(:last-child) {
+   margin-right: 8px;
 }
 
 .button-filter-item:hover,
@@ -341,6 +357,10 @@ body {
    display: flex;
    margin-right: 10px;
    fill: var(--secondary-color);
+   color: var(--secondary-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .wrapper-icon {
    display: flex;
@@ -363,10 +383,10 @@ body {
    border-radius: 50%;
    width: 44px;
    height: 44px;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-icon {
-   color: var(--secondary-color);
-}
+
 .social-list-icon,
 .clients-list-icon {
    fill: var(--fill-icon-color);
@@ -448,6 +468,7 @@ body {
    border-radius: 50%;
    width: 44px;
    height: 44px;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link-footer:hover,
 .social-list-link-footer:focus {
@@ -456,6 +477,9 @@ body {
 .projects-list-link {
    position: relative;
    display: block;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-link:hover {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -491,19 +515,11 @@ body {
    bottom: 0;
 }
 
-.contacts-link,
-.contacts-icon,
-.nav-links-link,
-.modal-btn,
-.social-list-link,
-.clients-list-link .clients-list-icon,
-.clients-list-link .wrapper-clients-icon,
-.button-filter-item,
-.projects-list-link,
-.contacts-link-footer,
-.social-list-link-footer {
-   transition-property: background-color, color, fill, border-color, box-shadow;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.clients-list-link .clients-list-icon {
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-list-link .wrapper-clients-icon {
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay {
